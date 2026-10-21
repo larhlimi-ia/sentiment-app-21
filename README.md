@@ -1,5 +1,7 @@
 # sentiment-app : dépôt du binôme
 
+21-10-2026
+
 Application fil rouge du cours *Développement et déploiement d'applications intelligentes*.
 Ce dépôt grandit chaque semaine ; la semaine 1 met en place le cadrage et l'environnement.
 
