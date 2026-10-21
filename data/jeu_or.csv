@@ -13,11 +13,11 @@ xqzvb wlkptr grombu,NEGATIVE,semantique,
 "Très bon rapport qualité prix, à recommander",POSITIVE,,
 "Produit de mauvaise qualité, déçu",NEGATIVE,,
 "Bon produit, livraison ok",POSITIVE,,
-"Horrible, j'ai dû le retourner",NEGATIVE,,ironie_non_detectee
+"Horrible, j'ai dû le retourner",NEGATIVE,,
 Pas mal mais peut mieux faire,POSITIVE,mitige,
 "Service client réactif et efficace",POSITIVE,,faux_negatif
-"Impossible de les contacter, zéro support",NEGATIVE,,negation_mal_detectee
+"Impossible de les contacter, zéro support",NEGATIVE,,
 "Parfait, exactement ce que je voulais",POSITIVE,,
 "Je ne recommande pas, mauvaise expérience",NEGATIVE,,negation_mal_detectee
-Trop cher pour la qualité offerte,NEGATIVE,mitige,qualite_non_detectee
+Trop cher pour la qualité offerte,NEGATIVE,mitige,
 Produit fragile malgré emballage soigné,POSITIVE,mitige,
