@@ -1,26 +1,18 @@
-"""Contrats d'entrée et de sortie de l'API (Pydantic v2)."""
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, field_validator
 
 
-class PredictRequest(BaseModel):
-    """Requête de prédiction."""
-    text: str = Field(..., min_length=1, max_length=2000, description="Texte à classifier",
-                      examples=["Livraison rapide, produit conforme, très satisfait"])
+class PredictionRequest(BaseModel):
+    text: str
+
+    @field_validator('text')
+    @classmethod
+    def text_not_empty(cls, v):
+        if not v or not v.strip():
+            raise ValueError('texte vide')
+        return v
 
 
-class PredictResponse(BaseModel):
-    """Réponse de prédiction."""
-    label: str = Field(..., description="POSITIVE ou NEGATIVE")
-    score: float = Field(..., ge=0, le=1, description="Confiance de la classe prédite")
-    text: str = Field(..., description="Aperçu du texte analysé (100 caractères)")
-
-
-class HealthResponse(BaseModel):
-    """Réponse de l'endpoint de santé."""
-    status: str = Field(..., description="OK si le modèle est chargé")
-    model: str = Field(..., description="Nom du modèle servi")
-
-
-class ErrorResponse(BaseModel):
-    """Format standard des erreurs FastAPI."""
-    detail: str
+class PredictionResponse(BaseModel):
+    text: str
+    label: str
+    score: float
