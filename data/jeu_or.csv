@@ -1,1 +1,23 @@
 text,attendu,difficulte,erreur_connue
+"Livraison rapide, produit conforme, très satisfait",POSITIVE,,
+"Pas déçu du tout, je recommande vivement",POSITIVE,negation,
+"Arrivé cassé, bravo le transporteur",NEGATIVE,ironie,
+Le produit est bon mais la livraison est lente,POSITIVE,mitige,
+"Service excellent et prix imbattable, vraiment top",POSITIVE,,
+Livraison ultra rapide en 2 jours,POSITIVE,,
+"Cassé à la réception, aucune réponse du support",NEGATIVE,,
+Pas exactement ce que j'attendais mais acceptable,POSITIVE,mitige,
+Plutôt bien pour le prix,POSITIVE,,
+"Décevant, ne correspond pas à la description",NEGATIVE,,faux_positif
+xqzvb wlkptr grombu,NEGATIVE,semantique,
+"Très bon rapport qualité prix, à recommander",POSITIVE,,
+"Produit de mauvaise qualité, déçu",NEGATIVE,,
+"Bon produit, livraison ok",POSITIVE,,
+"Horrible, j'ai dû le retourner",NEGATIVE,,ironie_non_detectee
+Pas mal mais peut mieux faire,POSITIVE,mitige,
+"Service client réactif et efficace",POSITIVE,,faux_negatif
+"Impossible de les contacter, zéro support",NEGATIVE,,negation_mal_detectee
+"Parfait, exactement ce que je voulais",POSITIVE,,
+"Je ne recommande pas, mauvaise expérience",NEGATIVE,,negation_mal_detectee
+Trop cher pour la qualité offerte,NEGATIVE,mitige,qualite_non_detectee
+Produit fragile malgré emballage soigné,POSITIVE,mitige,
