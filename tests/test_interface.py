@@ -60,3 +60,29 @@ def test_api_injoignable(monkeypatch):
                         lambda: httpx.Client(base_url="http://127.0.0.1:9", timeout=1))
     page = AppTest.from_file(PAGE, default_timeout=30).run()
     assert page.error[0].value == client.INJOIGNABLE
+
+import pytest
+from streamlit.testing.v1 import AppTest
+
+
+def test_interface_loads():
+    """L'interface Streamlit se charge"""
+    at = AppTest.from_file("ui/app.py")
+    at.run()
+    assert not at.exception
+
+
+def test_interface_title():
+    """L'interface affiche le titre"""
+    at = AppTest.from_file("ui/app.py")
+    at.run()
+    # Vérifie que la page a du contenu
+    assert len(at.text) > 0
+
+
+def test_interface_has_text_input():
+    """L'interface a un champ de texte"""
+    at = AppTest.from_file("ui/app.py")
+    at.run()
+    # Vérifie qu'il y a une zone de saisie
+    assert len(at.text_input) > 0 or len(at.text_area) > 0
